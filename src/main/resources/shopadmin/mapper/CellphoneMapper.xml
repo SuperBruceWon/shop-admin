@@ -15,4 +15,8 @@
            #{ram}, #{storage}, #{color}, #{description}, 
            #{price})
   </insert>
+  
+  <select id="findAll" resultType="Cellphone">
+    select * from CELLPHONE
+  </select>
 </mapper>

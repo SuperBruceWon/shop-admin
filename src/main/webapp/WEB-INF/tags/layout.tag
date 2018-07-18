@@ -15,6 +15,8 @@
 </head>
 <body>
   <div class="header"> 
+    <a href="${contextPath}/cellphones/">手机列表</a>
+    <a href="${contextPath}/cellphones/add">添加手机</a>
   </div>
   
   <div class="content">

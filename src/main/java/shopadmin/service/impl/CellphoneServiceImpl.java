@@ -1,5 +1,7 @@
 package shopadmin.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +21,10 @@ public class CellphoneServiceImpl implements CellphoneServie {
     @Override
     public void create(Cellphone cellphone) {
         cellphoneMapper.create(cellphone);
+    }
+
+    @Override
+    public List<Cellphone> findAll() {
+        return cellphoneMapper.findAll();
     }
 }

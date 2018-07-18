@@ -1,9 +1,12 @@
 package shopadmin.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,5 +37,12 @@ public class CellphoneController {
         }
         cellphoneServie.create(cellphone);
         return "redirect:/cellphones/";
+    }
+    
+    @RequestMapping(method = RequestMethod.GET, value = "/cellphones/")
+    public String list(Model model) {
+        List<Cellphone> cellphones = cellphoneServie.findAll();
+        model.addAttribute("cellphones", cellphones);
+        return "cellphone-list";
     }
 }
