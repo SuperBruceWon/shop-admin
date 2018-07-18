@@ -1,7 +1,10 @@
 package shopadmin.model;
 
+import javax.validation.constraints.NotEmpty;
+
 public class Cellphone {
     private Long id;
+    @NotEmpty(message = "必填")
     private String brand;
     private String model;
     private String os;

@@ -20,6 +20,7 @@
         <form:option value="锤子">锤子</form:option>
         <form:option value="华为">华为</form:option>
       </form:select>
+      <form:errors path="brand" />
     </div>
     
     <div>
