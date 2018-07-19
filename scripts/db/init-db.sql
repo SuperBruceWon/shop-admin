@@ -11,3 +11,10 @@ create table CELLPHONE(
   DESCRIPTION varchar(128),
   PRICE integer not null -- 单位：分
 );
+
+create table USER(
+  ID identity,
+  USERNAME varchar(64) not null,
+  PASSWORD varchar(64) not null,
+  constraint USER_UQ_USERNAME unique (USERNAME)
+);
