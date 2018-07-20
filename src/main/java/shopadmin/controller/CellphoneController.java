@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import shopadmin.model.Cellphone;
-import shopadmin.service.CellphoneServie;
+import shopadmin.service.CellphoneService;
 
 @Controller
 public class CellphoneController {
-    private CellphoneServie cellphoneServie;
+    private CellphoneService cellphoneServie;
     
     @Autowired
-    public CellphoneController(CellphoneServie cellphoneServie) {
+    public CellphoneController(CellphoneService cellphoneServie) {
         this.cellphoneServie = cellphoneServie;
     }
 

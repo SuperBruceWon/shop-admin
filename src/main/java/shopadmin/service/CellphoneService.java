@@ -4,7 +4,7 @@ import java.util.List;
 
 import shopadmin.model.Cellphone;
 
-public interface CellphoneServie {
+public interface CellphoneService {
 
     void create(Cellphone cellphone);
 

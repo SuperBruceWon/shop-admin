@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import shopadmin.mapper.CellphoneMapper;
 import shopadmin.model.Cellphone;
-import shopadmin.service.CellphoneServie;
+import shopadmin.service.CellphoneService;
 
 @Service
-public class CellphoneServiceImpl implements CellphoneServie {
+public class CellphoneServiceImpl implements CellphoneService {
     private CellphoneMapper cellphoneMapper;
 
     @Autowired
