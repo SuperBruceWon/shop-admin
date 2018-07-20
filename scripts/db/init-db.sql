@@ -16,5 +16,6 @@ create table USER(
   ID identity,
   USERNAME varchar(64) not null,
   PASSWORD varchar(64) not null,
+  LAST_LOGIN_TIME timestamp
   constraint USER_UQ_USERNAME unique (USERNAME)
 );
