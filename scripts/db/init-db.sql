@@ -19,3 +19,12 @@ create table USER(
   LAST_LOGIN_TIME timestamp
   constraint USER_UQ_USERNAME unique (USERNAME)
 );
+
+create table SHOPPING_CART_ITEM(
+  USER_ID bigint not null,
+  CELLPHONE_ID bigint not null,
+  AMOUNT integer, 
+  constraint SHOPPING_CART_ITEM_FK_USER_ID_USER foreign key (USER_ID) references USER (ID),
+  constraint SHOPPING_CART_ITEM_FK_CELLPHONE_ID_CELLPHONE foreign key (CELLPHONE_ID) references CELLPHONE (ID),
+  constraint SHOPPING_CART_ITEM_PK primary key (USER_ID, CELLPHONE_ID)
+);
